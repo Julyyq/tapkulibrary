@@ -453,7 +453,7 @@ static inline NSString * TKKeyPathFromOperationState(TKOperationState state) {
 
 - (void) setCancelled:(BOOL)cancelled {
     [self willChangeValueForKey:@"isCancelled"];
-    _cancelled = cancelled;
+    self.cancelled = cancelled;
     [self didChangeValueForKey:@"isCancelled"];
     
     if ([self isCancelled]) self.state = TKOperationStateFinished;
